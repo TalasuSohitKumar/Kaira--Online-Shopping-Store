@@ -1,0 +1,120 @@
+
+<html>
+<head>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1 {
+   font-size: 6vw;
+   text-align : center;
+   padding : 5px;
+   margin : 0;
+   color :  black;
+   }
+
+h2 {
+   font-size: 5vw;
+   text-align : center;
+   padding : 5px;
+   margin : 0;
+   color :  black;
+   }   
+   
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float : left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: RoyalBlue;
+}
+
+   
+
+.off { 
+  padding : 15px 5px;
+  }
+  
+
+  
+.brand {
+  font-family :  Times New Roman;
+  text-align : center;
+  color : red;
+  padding : 10px;
+  
+}
+
+.bb {
+ 
+  padding : 10px 10px;
+  }
+
+
+.btnn {
+    background-color: white;
+
+    border: none;
+    color: black;
+    padding: 10px 10px;
+    font-size: 20px;
+    cursor: pointer;
+	float : left;
+}
+ 
+.btnn:hover {
+    background-color: #f2f2f2;
+}   
+</style>
+</head>
+<body>
+{% if c == None %} 
+<button class="btnn"onclick="window.location.href='/login'"><i class="fa fa-sign-in"></i>Login</button>
+<button class="btnn"onclick="window.location.href='/signup'"><i class="fa fa-user-plus"></i>Sign up</button>
+{% else %}
+<button class="btnn"onclick="window.location.href='/logout'">log out</button>
+
+{% endif %} 
+<button class="btnn"style= "float:right" onclick="window.location.href='/viewcart'"><i class="fa fa-shopping-cart"></i></button>
+
+<h1>K A I R A </h1>
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/men">Men</a></li>
+  <li style="float:right"><a  href="#about">About us</a></li>
+</ul>
+<br/>
+{% if c != None %} 
+Welcome {{c}}
+{% endif %} 
+<h3>
+	{{msg}}
+</h3>
+<img src ="static/home.jpg" class = "off" width = "99%" height = "270" >
+<img src ="static/SALE.jpg"  width = "45%" height = "300" >
+<img src ="static/5.jpg"  width = "45%" height = "300" >
+<img src="static/giphy.gif" alt="Smiley face" style="float:left;padding:30px;width:550px;height:300px;">
+<h2> I could give up</h2>
+<H2> SHOPPING,</h2>
+<H2>but I'm not a</h2>
+<h2>QUITTER.</h2>
+
+
+
+</body>
+</html>

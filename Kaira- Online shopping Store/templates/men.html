@@ -1,0 +1,91 @@
+
+<html>
+<head>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1 {
+   font-size: 6vw;
+   text-align : center;
+   padding : 5px;
+   margin : 0;
+   color :  black;
+   }
+   
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float : left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: RoyalBlue;
+}
+
+   .btnn {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px 10px;
+    font-size: 20px;
+    cursor: pointer;
+	float : right;
+}
+ 
+.btnn:hover {
+    background-color: #f2f2f2;
+}  
+.bb {
+ 
+  padding : 10px 10px;
+  } 
+</style>
+</head>
+<body>
+
+<button class="btnn"onclick="window.location.href='/viewcart'"><i class="fa fa-shopping-cart"></i></button>
+
+<h1>K A I R A </h1>
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/men">Men</a></li>
+  <li style="float:right"><a  href="#about">About us</a></li>
+</ul>
+<h2 id='msg'>
+	{{msg}}
+</h2>
+<table width='100%'>
+<tr>
+<td style='text-align:center'>
+<img src ="static/G4.jpg"  class = "bb" height = "320"> 
+<br/>
+<button onclick="window.location.href='/cart?pid=1&price=2500'">add to cart</button>
+</td>
+<td style='text-align:center'>
+<img src ="static/H1.jpg"  class = "bb"  height = "320"> 
+<br/>
+<button onclick="window.location.href='/cart?pid=2&price=1999'">add to cart</button>
+</td>
+<td style='text-align:center'>
+<img src ="static/F1.jpg"  class = "bb"  height = "320"> 
+<br/>
+<button onclick="window.location.href='/cart?pid=3&price=2799'">add to cart</button>
+
+</td>
+</table>
+</BODY>
+</HTML>
